@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+@mixin box-shadow($argus){
+  box-shadow: $argus;
+  -moz-box-shadow: $argus;
+  -webkit-box-shadow: $argus;
+}
+@mixin transition($argus){
+  transition: $argus;
+  -moz-transition: $argus;
+  -webkit-transition: $argus;
+}
+#container{
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+  height: 1000px;
+  .grid{
+    margin: 8px;
+    padding: 15px;
+    width: 180px;
+    float: left;
+    min-height: 40px;
+    @include box-shadow(0 1px 3px #ccc3c6);
+    @include transition(top 1s ease );
+  }
+}
